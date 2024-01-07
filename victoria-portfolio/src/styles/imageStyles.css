@@ -1,0 +1,50 @@
+.image-slider {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    opacity: 0;
+}
+
+.active {
+    display: block;
+    opacity: 1;
+    z-index: 1;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide {
+    animation: fadeInOut 2s infinite ease-in-out; 
+}
+
+.slide:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.slide:nth-child(4) {
+    animation-delay: 6s;
+}
